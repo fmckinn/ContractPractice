@@ -13,6 +13,8 @@ public class Student
      * 
      * @pre name != null AND name != "" AND 0 < age < 100 AND [email contains '@']
      * AND email != null
+     * 
+     * @post this.name = name & this.age = age AND this.email = email
      */
 
     public Student(String name, int age, String email)
@@ -21,6 +23,15 @@ public class Student
         this.age = age;
         this.email = email;
     }
+
+    /**
+     * standard getter for name.
+     * @return name, as a string
+     * 
+     * @pre none
+     * 
+     * @post getName = name AND name = #name AND age = #age AND email = #email
+     */
 
     public String getName()
     {
@@ -51,6 +62,15 @@ public class Student
     {
         this.email = anEmail;
     }
+
+
+    /**
+     * Prints student information where is variable is printed to its own line.
+     * @param aStudent The student to print the information of
+     * @pre aStudent != null
+     * @post [prints the student information by calling the getters for aStudent's instance variables.
+     * Prints each to their own line using println.]
+     */
 
     public static void printStudentInformation(Student aStudent)
     {
