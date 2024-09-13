@@ -4,6 +4,17 @@ public class Student
     private int age;
     private String email;
 
+    /**
+     * Parameterized constructor for students. Takes in 3 parameters.
+     * 
+     * @param name The name of the student, a string
+     * @param age The age of the student, an int
+     * @param email The email of the student, as a string, and contains the @ sign
+     * 
+     * @pre name != null AND name != "" AND 0 < age < 100 AND [email contains '@']
+     * AND email != null
+     */
+
     public Student(String name, int age, String email)
     {
         this.name = name;
